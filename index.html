@@ -1,1 +1,39 @@
-<div id="app"></div>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+</head>
+<body>
+
+<h2>Monaco Editor Sample - Loading with dojo toolkit</h2>
+<div id="container" style="width:800px;height:600px;border:1px solid grey"></div>
+
+<script>
+	// Referencing monaco-editor AMD module
+	var dojoConfig = {
+    packages: [
+        "vs"
+    ],
+    paths: {
+        vs: "../monaco-editor/min/vs"
+    }
+  };
+</script>
+
+<script src="../node_modules/dojo/dojo.js"></script>
+
+<script>
+	require(['vs/editor/editor.main'], function() {
+		var editor = monaco.editor.create(document.getElementById('container'), {
+			value: [
+				'function x() {',
+				'\tconsole.log("Hello world!");',
+				'}'
+			].join('\n'),
+			language: 'javascript'
+		});
+	});
+</script>
+</body>
+</html>
