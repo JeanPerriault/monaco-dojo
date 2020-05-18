@@ -1,0 +1,20 @@
+{
+  "name": "monaco-dojo",
+  "version": "1.0.0",
+  "description": "Testing monaco-editor integration in dojo v1",
+  "main": "index.html",
+  "dependencies": {
+    "dojo": "^1.16.2",
+    "monaco-editor": "^0.20.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dojo",
+    "monaco-editor"
+  ],
+  "author": "Jean Perriault",
+  "license": "MIT"
+}
